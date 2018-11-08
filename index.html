@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercice_5</title>
+  <meta charset="UTF-8" />
+</head>
+<body>
+  <form>
+    <label for="firstNumber">Premier nombre : </label><input type="text" id="firstNumber" name="firstNumber" /><br />
+    <label for="secondNumber">Deuxième nombre : </label><input type="text" id="secondNumber" name="secondNumber" /><br />
+    <button id="submit" name ="submit" onclick="result()">Valider</button>
+  </form>
+  <script type="text/javascript">
+  function result(){
+    var firstNumber = Math.trunc(document.getElementById('firstNumber').value);//Math.floor : pour ne prendre que le nombre entier
+    var secondNumber = document.getElementById('secondNumber').value;
+    var result = firstNumber * secondNumber;
+    //isNan(is not a number) fonction pour vérifier s'il s'agit bien d'un nombre
+    if(isNaN(firstNumber)==false && isNaN(secondNumber)==false){
+      alert(result);
+    }else{
+      alert('merci de renseigner un nombre');
+    }
+  }
+  </script>
+</body>
+</html>
